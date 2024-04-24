@@ -27,9 +27,19 @@ const initApp = () => {
 
     displayFunction(result);
   });
+  convertBtn.addEventListener("touchstart", (evnt) => {
+    //enableOutput();
+    // console.log(enableOutput());
+    //debugger;
+    const result = getInputFunction(evnt);
+
+    displayFunction(result);
+  });
+
   const resetBtn = document.querySelector(".reset");
 
   resetBtn.addEventListener("click", disableOutput);
+  resetBtn.addEventListener("touchstart", disableOutput);
 };
 
 document.addEventListener("DOMContentLoaded", initApp);

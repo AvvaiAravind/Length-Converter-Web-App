@@ -1,4 +1,5 @@
 export const getInputFunction = (evnt) => {
+  evnt.preventDefault();
   let fromUnit = document.getElementById("fromUnit").value;
 
   let length = document.getElementById("convert-from").value;
@@ -7,7 +8,6 @@ export const getInputFunction = (evnt) => {
   } */
 
   let toUnit = document.getElementById("toUnit").value;
-  evnt.preventDefault();
 
   return formulaFunction(fromUnit, length, toUnit);
 };
