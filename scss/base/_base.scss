@@ -1,0 +1,124 @@
+// basic reset
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// basic styling
+input,
+button,
+select,
+option {
+  font: inherit;
+  border: none;
+  outline: none;
+  padding: 2px;
+}
+
+html {
+  font-family: sans-serif;
+  background-color: $background-color;
+}
+
+body {
+  max-width: 400px;
+  min-height: 200px;
+  transition: min-height 5s ease-in-out;
+  background-color: $body-color;
+  margin: 100px auto;
+}
+
+header {
+  padding: 1rem;
+  text-align: center;
+}
+
+main {
+  padding: 1rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  .fromField {
+    display: grid;
+    margin-bottom: 1rem;
+    gap: 1rem;
+  }
+  .toField {
+    display: grid;
+    margin-bottom: 1rem;
+    gap: 1rem;
+  }
+  .fromLength {
+    font-weight: bold;
+    text-shadow: 0.5px 0.5px 1px black;
+  }
+  .toLength {
+    font-weight: bold;
+    text-shadow: 0.5px 0.5px 1px black;
+  }
+
+  .buttonField {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+  }
+}
+
+.reset {
+  background-color: $reset-btn-color;
+  color: $higlight-color;
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+.reset:hover {
+  box-shadow: 2px 2px 2px black;
+}
+.convert {
+  background-color: $cnvt-btn-color;
+  color: $higlight-color;
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+.convert:hover {
+  box-shadow: 2px 2px 2px black;
+}
+
+/* @include mq(400px) {
+  .fromField {
+    display: grid;
+    margin-bottom: 1rem;
+    gap: 0.5rem;
+    .fromLength {
+      grid-row: 1 / span 1;
+      grid-column: 1 / span 1;
+    }
+    .fromUnit {
+      grid-row: 1 / span 1;
+      grid-column: 2 / span 1;
+    }
+    .inputLength {
+      grid-row: 1 / span 1;
+      grid-column: 3 / span 1;
+    }
+  }
+  .toField {
+    display: grid;
+    margin-bottom: 1rem;
+    gap: 0.5rem;
+    .toLength {
+      grid-row: 1 / span 1;
+      grid-column: 1 / span 1;
+    }
+    .toUnit {
+      grid-row: 1 / span 1;
+      grid-column: 2 / span 1;
+    }
+    .outputLength {
+      grid-row: 1 / span 1;
+      grid-column: 3 / span 1;
+    }
+  }
+} */

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Here you can convert different lengths" />
+    <title>Length Converter</title>
+    <link rel="stylesheet" href="css/main.min.css" />
+    <script src="js/main.js" defer type="module"></script>
+  </head>
+  <body>
+    <div class="container" id="container">
+      <header class="mainHeading" id="mainHeading">
+        <h1 class="mainHeading__h1" id="mainHeading__h1">LENGTH CONVERTER</h1>
+      </header>
+      <main>
+        <form>
+          <div class="fromField" id="fromField">
+            <label for="convert-from" id="fromLength" class="fromLength"
+              >Convert From
+            </label>
+            <select name="fromUnit" id="fromUnit" class="fromUnit" size="1">
+              <option value="Millimeter" selected>Millimeter</option>
+              <option value="Centimeter">Centimeter</option>
+              <option value="Decimeter">Decimeter</option>
+              <option value="Meter">Meter</option>
+              <option value="Decameter">Decameter</option>
+              <option value="Hectometer">Hectometer</option>
+              <option value="Kilometer">Kilometer</option>
+              <option value="Inch">Inch</option>
+              <option value="Foot">Foot</option>
+              <option value="Yard">Yard</option>
+              <option value="Mile">Mile</option>
+            </select>
+            <input
+              type="number"
+              placeholder="Input Length"
+              id="convert-from"
+              class="inputLength"
+              required
+              autofocus
+            />
+          </div>
+
+          <div class="toField" id="toField">
+            <label for="convert-to" id="toLength" class="toLength"
+              >Convert To &nbsp; &nbsp;</label
+            >
+            <select name="toUnit" id="toUnit" class="toUnit" size="1">
+              <option value="Millimeter" selected>Millimeter</option>
+              <option value="Centimeter">Centimeter</option>
+              <option value="Decimeter">Decimeter</option>
+              <option value="Meter">Meter</option>
+              <option value="Decameter">Decameter</option>
+              <option value="Hectometer">Hectometer</option>
+              <option value="Kilometer">Kilometer</option>
+              <option value="Inch">Inch</option>
+              <option value="Foot">Foot</option>
+              <option value="Yard">Yard</option>
+              <option value="Mile">Mile</option>
+            </select>
+            <input
+              id="convert-to"
+              placeholder="Output Length"
+              class="outputLength"
+              disabled
+            />
+          </div>
+          <div class="buttonField" id="buttonField">
+            <button type="reset" class="reset">Reset</button>
+            <button type="submit" class="convert">Convert</button>
+          </div>
+        </form>
+      </main>
+    </div>
+  </body>
+</html>
