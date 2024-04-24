@@ -10,9 +10,11 @@ const initApp = () => {
 
   const fromUnit = document.querySelector(".fromUnit");
   fromUnit.addEventListener("click", dropDown);
+  fromUnit.addEventListener("touchstart", dropDown);
 
   const toUnit = document.querySelector(".toUnit");
   toUnit.addEventListener("click", dropDown);
+  toUnit.addEventListener("touchstart", dropDown);
 
   // convert
 
