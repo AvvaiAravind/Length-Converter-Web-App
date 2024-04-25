@@ -9,12 +9,13 @@ const initApp = () => {
   // toggling unit
 
   const fromUnit = document.querySelector(".fromUnit");
-  fromUnit.addEventListener("click", dropDown);
-  fromUnit.addEventListener("touchstart", dropDown);
+  fromUnit.addEventListener("click", dropDown).stopPropagation();
+
+  fromUnit.addEventListener("touchstart", dropDown).stopPropagation();
 
   const toUnit = document.querySelector(".toUnit");
-  toUnit.addEventListener("click", dropDown);
-  toUnit.addEventListener("touchstart", dropDown);
+  toUnit.addEventListener("click", dropDown).stopPropagation();
+  toUnit.addEventListener("touchstart", dropDown.stopPropagation());
 
   // convert
 
@@ -27,7 +28,7 @@ const initApp = () => {
 
     displayFunction(result);
   });
-  convertBtn.addEventListener("touchstart", (evnt) => {
+  /* convertBtn.addEventListener("touchstart", (evnt) => {
     //enableOutput();
     // console.log(enableOutput());
     //debugger;
@@ -35,17 +36,19 @@ const initApp = () => {
 
     displayFunction(result);
   });
-
+ */
   const resetBtn = document.querySelector(".reset");
 
   resetBtn.addEventListener("click", disableOutput);
-  resetBtn.addEventListener("touchstart", disableOutput);
+  // resetBtn.addEventListener("touchstart", disableOutput);
 };
 
 document.addEventListener("DOMContentLoaded", initApp);
+console.log("DOM content loaded");
 
 // helper function
 const dropDown = (evnt) => {
+  console.log("Dropdown event triggered");
   const element = evnt.currentTarget;
 
   const currentSize = element.getAttribute("size");
