@@ -6,17 +6,22 @@ import {
 } from "./displayFunction.js";
 
 const initApp = () => {
+  const isMobileDevice = () => {
+    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+      navigator.userAgent
+    );
+  };
   // toggling unit
+  if (!isMobileDevice()) {
+    const fromUnit = document.querySelector(".fromUnit");
+    fromUnit.addEventListener("click", dropDown);
 
-  /*  const fromUnit = document.querySelector(".fromUnit");
-  fromUnit.addEventListener("click", dropDown);
+    //fromUnit.addEventListener("touchstart", dropDown);
 
-  fromUnit.addEventListener("touchstart", dropDown);
-
-  const toUnit = document.querySelector(".toUnit");
-  toUnit.addEventListener("click", dropDown);
-  toUnit.addEventListener("touchstart", dropDown);
- */
+    const toUnit = document.querySelector(".toUnit");
+    toUnit.addEventListener("click", dropDown);
+    // toUnit.addEventListener("touchstart", dropDown);
+  }
   // convert
 
   const convertBtn = document.querySelector(".convert");
