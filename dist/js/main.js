@@ -8,15 +8,15 @@ import {
 const initApp = () => {
   // toggling unit
 
-  const fromUnit = document.querySelector(".fromUnit");
-  fromUnit.addEventListener("click", dropDown).stopPropagation();
+  /*  const fromUnit = document.querySelector(".fromUnit");
+  fromUnit.addEventListener("click", dropDown);
 
-  fromUnit.addEventListener("touchstart", dropDown).stopPropagation();
+  fromUnit.addEventListener("touchstart", dropDown);
 
   const toUnit = document.querySelector(".toUnit");
-  toUnit.addEventListener("click", dropDown).stopPropagation();
-  toUnit.addEventListener("touchstart", dropDown.stopPropagation());
-
+  toUnit.addEventListener("click", dropDown);
+  toUnit.addEventListener("touchstart", dropDown);
+ */
   // convert
 
   const convertBtn = document.querySelector(".convert");
